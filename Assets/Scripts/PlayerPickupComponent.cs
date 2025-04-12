@@ -29,9 +29,12 @@ public class PlayerPickupComponent : MonoBehaviour
                 {
                     _currentObjectInHand = pickableObject;
                     pickableObject.PickUpObject();
-                    _currentObjectInHand.transform.SetParent(_player);
+                    _currentObjectInHand.transform.SetParent(_player.transform);
+                    _currentObjectInHand.transform.position = startPos + cameraForward * 500;
                 }
             }
+
+            Debug.DrawLine(startPos, startPos + cameraForward * 500);
         }
     }
 }
