@@ -2,29 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EPickupType
+{
+    SmallWall,
+    LargeWall,
+    SmallGround,
+    LargeGround,
+}
+
 public class PickableObject : MonoBehaviour
 {
     [SerializeField]
-    private Collider _collider;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private EPickupType pickupType;
 
-    // Update is called once per frame
-    void Update()
+    public EPickupType PickupType { get { return pickupType; } }
+    
+    [SerializeField]
+    private Collider _collider;
+
+    private PlaceObjectZone _zone;
+
+    public void SetZone(PlaceObjectZone zone)
     {
-        
+        _zone = zone;
+        if (zone)
+        {
+            PutDownObject();
+        }
     }
 
     public void PickUpObject()
     {
         _collider.enabled = false;
+        _zone.RemoveObjectFromZone();
+        _zone = null;
     }
 
-    public void PutDownObject()
+    private void PutDownObject()
     {
-        _collider.enabled = false;
+        _collider.enabled = true;
     }
 }

@@ -8,7 +8,9 @@ public class PlayerPickupComponent : MonoBehaviour
     private PickableObject _currentObjectInHand;
 
     [SerializeField]
-    float raycastDist = 500f;
+    private float _raycastDist = 500f;
+
+    private float _distToKeepObjectInFrontOfPlayer = 1.5f;
 
     private void Awake()
     {
@@ -22,7 +24,7 @@ public class PlayerPickupComponent : MonoBehaviour
             Vector3 startPos = _player.transform.position;
             Vector3 cameraForward = _player.CameraForward;
             RaycastHit hit;
-            if (Physics.Raycast(startPos, cameraForward, out hit, raycastDist))
+            if (Physics.Raycast(startPos, cameraForward, out hit, _raycastDist))
             {
                 PickableObject pickableObject = hit.transform.GetComponent<PickableObject>();
                 if (pickableObject)
@@ -30,11 +32,21 @@ public class PlayerPickupComponent : MonoBehaviour
                     _currentObjectInHand = pickableObject;
                     pickableObject.PickUpObject();
                     _currentObjectInHand.transform.SetParent(_player.transform);
-                    _currentObjectInHand.transform.position = startPos + cameraForward * 500;
+                    _currentObjectInHand.transform.position = startPos + cameraForward * _distToKeepObjectInFrontOfPlayer;
+                    _currentObjectInHand.transform.rotation = Quaternion.identity;
+                }
+                else if (_currentObjectInHand)
+                {
+                    PlaceObjectZone zone = hit.transform.GetComponent<PlaceObjectZone>();
+                    if (zone && zone.CanUseZone(_currentObjectInHand))
+                    {
+                        zone.PlaceObjectInZone(_currentObjectInHand);
+                        _currentObjectInHand = null;
+                    }
                 }
             }
 
-            Debug.DrawLine(startPos, startPos + cameraForward * 500);
+            Debug.DrawLine(startPos, startPos + cameraForward * _raycastDist, Color.red, 3);
         }
     }
 }
