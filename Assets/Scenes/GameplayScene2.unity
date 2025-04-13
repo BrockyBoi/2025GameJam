@@ -732,6 +732,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 53061840}
+--- !u!82 &53061844
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53061839}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &116619869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -897,13 +993,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45776f5dd5e68a843adb73347188eddd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.317
+  m_Volume: 0.176
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 244
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5486,7 +5582,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -7165659543255690052, guid: b890946007c46074cbdbad1120870450, type: 2}
-    value: {fileID: 45432138}
+    value: {fileID: 53061844}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1150742280
@@ -7220,6 +7316,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: d2f812fc5921f0242a97b90c0ae34e5d, type: 2}
     - target: {fileID: 5866666021909216657, guid: cf01472c0e8a974408f24204d0a6dd25, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:RightFoot'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform
+        'mixamorig:LeftHand'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:Spine1'\n\tTransform
+        'mixamorig:Spine2'\n\tTransform 'mixamorig:LeftHandThumb1'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
+        'mixamorig:RightUpLeg'\n\tTransform 'mixamorig:LeftHandIndex3'\n\tand more
+        ..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: cf01472c0e8a974408f24204d0a6dd25, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
@@ -7236,6 +7342,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cf01472c0e8a974408f24204d0a6dd25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 53061842}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cf01472c0e8a974408f24204d0a6dd25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 53061844}
   m_SourcePrefab: {fileID: 100100000, guid: cf01472c0e8a974408f24204d0a6dd25, type: 3}
 --- !u!1 &1797625952
 GameObject:
@@ -8128,7 +8237,7 @@ PlayableDirector:
   - key: {fileID: -7085473533230556314, guid: a1a3269b8a4a3274e904281015072134, type: 2}
     value: {fileID: 53061840}
   - key: {fileID: 818979910196387073, guid: a1a3269b8a4a3274e904281015072134, type: 2}
-    value: {fileID: 45432138}
+    value: {fileID: 53061844}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &2133335813
