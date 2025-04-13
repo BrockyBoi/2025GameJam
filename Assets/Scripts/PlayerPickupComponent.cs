@@ -19,7 +19,7 @@ public class PlayerPickupComponent : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !EscapeManager.Instance.IsPaused)
+        if (Input.GetMouseButtonDown(0) && !EscapeManager.Instance.IsPaused && !SuspicionManager.Instance.IsGameOver)
         {
             Vector3 startPos = Camera.main.transform.position;
             Vector3 cameraForward = _player.CameraForward;

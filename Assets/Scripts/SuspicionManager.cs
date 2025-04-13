@@ -6,6 +6,8 @@ public class SuspicionManager : MonoBehaviour
 {
     public static SuspicionManager Instance;
 
+    public bool IsGameOver { get; private set; }
+
     private float _currentSuspicionLevel = 0;
 
     [SerializeField]
@@ -40,6 +42,7 @@ public class SuspicionManager : MonoBehaviour
 
     private void LoseGame()
     {
-
+        IsGameOver = true;
+        EndGameUI.Instance.ShowUI();
     }
 }

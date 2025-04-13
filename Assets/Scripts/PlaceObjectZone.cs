@@ -17,6 +17,9 @@ public class PlaceObjectZone : MonoBehaviour
     [SerializeField]
     private MeshRenderer _highlightRenderer;
 
+    [SerializeField]
+    private AudioSource _audioSource;
+
     private void Start()
     {
         if (_currentObjectInZone)
@@ -75,6 +78,8 @@ public class PlaceObjectZone : MonoBehaviour
         if (!_currentObjectInZone && heldObject)
         {
             ForceObjectInZone(heldObject);
+
+            _audioSource.Play();
         }
     }
 
@@ -82,6 +87,8 @@ public class PlaceObjectZone : MonoBehaviour
     {
         _currentObjectInZone = null;
         _selectionCollider.enabled = true;
+
+        _audioSource.Play();
     }
 
     public void Highlight(bool shouldHighlight)

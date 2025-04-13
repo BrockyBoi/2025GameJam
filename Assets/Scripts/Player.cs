@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (EscapeManager.Instance && EscapeManager.Instance.IsPaused)
+        if (EscapeManager.Instance.IsPaused || SuspicionManager.Instance.IsGameOver)
         {
             return;
         }
