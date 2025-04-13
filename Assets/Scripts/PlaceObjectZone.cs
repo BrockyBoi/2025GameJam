@@ -22,6 +22,9 @@ public class PlaceObjectZone : MonoBehaviour
     [SerializeField]
     private AudioSource _audioSource;
 
+    [SerializeField]
+    private Vector3 _extraRotationAdjustment = Vector3.zero;
+
     private void Start()
     {
         if (_currentObjectInZone)
@@ -32,6 +35,8 @@ public class PlaceObjectZone : MonoBehaviour
         Highlight(false);
 
         ObjectPlacementZoneManager.Instance.RegisterObject(this);
+
+        _selectionCollider.enabled = true;
     }
 
     public bool CanUseZone(PickableObject pickableObject)
@@ -70,9 +75,12 @@ public class PlaceObjectZone : MonoBehaviour
         _currentObjectInZone.transform.SetParent(transform);
         _currentObjectInZone.transform.position = transform.position;
         _currentObjectInZone.transform.rotation = Quaternion.identity;
+        if (_extraRotationAdjustment != Vector3.zero)
+        {
+            _currentObjectInZone.transform.Rotate(_extraRotationAdjustment);
+        }
         _currentObjectInZone.SetZone(this);
 
-        _selectionCollider.enabled = false;
         _currentObjectInZone.transform.localScale = _currentObjectInZone.StartScale / transform.localScale.x;
     }
 
@@ -89,7 +97,6 @@ public class PlaceObjectZone : MonoBehaviour
     public void RemoveObjectFromZone()
     {
         _currentObjectInZone = null;
-        _selectionCollider.enabled = true;
 
         _audioSource.Play();
     }

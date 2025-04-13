@@ -32,7 +32,7 @@ public class PlayerPickupComponent : MonoBehaviour
                 {
                     PickUpObject(pickableObject);
                 }
-                else if (_currentObjectInHand)
+                else
                 {
                     PlaceObjectZone zone = hit.transform.GetComponent<PlaceObjectZone>();
                     if (zone)

@@ -168,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 4880303752559117509, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4ed0b84cecd504c4fb04c0eadb7b36e9, type: 3}
+      objectReference: {fileID: 21300000, guid: f89288c3900db254eb53adf840702c17, type: 3}
     - target: {fileID: 6057379833003721393, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: m_Name
       value: RingBox

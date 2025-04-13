@@ -35,7 +35,7 @@ public class EscapeManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             PauseUI.Instance.ShowUI();
-            _timeLineDirector.Pause();
+            PauseTimeline(true);
         }
         else
         {
@@ -43,7 +43,20 @@ public class EscapeManager : MonoBehaviour
             PauseUI.Instance.gameObject.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            PauseTimeline(false);
+        }
+    }
+
+    public void PauseTimeline(bool pause)
+    {
+        if (pause)
+        {
+            _timeLineDirector.Pause();
+        }
+        else
+        {
             _timeLineDirector.Resume();
+
         }
     }
 }

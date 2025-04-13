@@ -48,6 +48,8 @@ public class Player : MonoBehaviour
         Vector3 forwardVec = _camera.transform.forward;
 
         Vector3 movementForward = ((playerX * transform.right) + (playerY * forwardVec)).ChangeAxis(ExtensionMethods.VectorAxis.Y, 0);
+        Vector3 gravity = Vector3.up * -9.8f;
+        movementForward += gravity;
         _characterController.Move(movementForward * _moveSpeed * Time.deltaTime);
 
         transform.Rotate(new Vector3(0, mouseX, 0));

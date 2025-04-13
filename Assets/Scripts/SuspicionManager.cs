@@ -45,6 +45,7 @@ public class SuspicionManager : MonoBehaviour
     private void LoseGame()
     {
         IsGameOver = true;
-        EndGameUI.Instance.ShowUI();
+        EndGameUI.Instance.ShowUI(true);
+        EscapeManager.Instance.PauseTimeline(true);
     }
 }

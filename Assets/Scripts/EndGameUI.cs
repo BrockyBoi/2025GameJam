@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.Playables;
 
 public class EndGameUI : MonoBehaviour
 {
@@ -11,7 +13,13 @@ public class EndGameUI : MonoBehaviour
     private Canvas _canvas;
 
     [SerializeField]
+    private TextMeshProUGUI _text;
+
+    [SerializeField]
     private string _sceneToLoadOnRetry;
+
+    [SerializeField]
+    private float _totalDuration = 114;
 
     private void Awake()
     {
@@ -19,11 +27,23 @@ public class EndGameUI : MonoBehaviour
         _canvas.enabled = false;
     }
 
-    public void ShowUI()
+    private void Start()
     {
+        Invoke("OnTimerEnd", _totalDuration);
+    }
+
+    private void OnTimerEnd()
+    {
+        ShowUI(false);
+    }
+
+    public void ShowUI(bool loseGame)
+    {
+        _text.text = loseGame ? "You Were Discovered" : "You Remained Hidden!";
         _canvas.enabled = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        EscapeManager.Instance.PauseTimeline(true);
     }
 
     public void PressRetry()
