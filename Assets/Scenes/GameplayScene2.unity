@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5623573, g: 0.6143784, b: 0.63436854, a: 1}
+  m_IndirectSpecularColor: {r: 0.56214833, g: 0.6144073, b: 0.6344627, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -212,7 +212,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.561202e-39, y: -9.1835e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1, y: 3.59e-43, z: 0, w: 1.7571016e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1835,6 +1835,10 @@ PrefabInstance:
     - target: {fileID: 4073811141628962461, guid: 544dc3dc820d26b44915cc361c0f7ec9, type: 3}
       propertyPath: m_Name
       value: DetectionCone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073811141628962461, guid: 544dc3dc820d26b44915cc361c0f7ec9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8873453511481765636, guid: 544dc3dc820d26b44915cc361c0f7ec9, type: 3}
       propertyPath: m_LocalScale.x
@@ -5677,6 +5681,7 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - c4a18957aa075fb4e860c1e5e46d0615: {fileID: 2133335811}
+    - 7418e0d84ea2dc04a83504887afcfe81: {fileID: 2133335811}
 --- !u!4 &1150742280
 Transform:
   m_ObjectHideFlags: 0
