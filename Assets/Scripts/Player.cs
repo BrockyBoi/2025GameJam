@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+
     [SerializeField]
     private Camera _camera;
 
@@ -20,16 +22,24 @@ public class Player : MonoBehaviour
     public Vector3 CameraForward { get { return _camera.transform.forward; } }
 
     private float _pitch;
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (EscapeManager.Instance && EscapeManager.Instance.IsPaused)
+        {
+            return;
+        }
+
         float playerX = Input.GetAxis("Horizontal");
         float playerY = Input.GetAxis("Vertical");
         float mouseX = Input.GetAxis("Mouse X") * _rotateSpeed * Time.deltaTime;
@@ -43,7 +53,7 @@ public class Player : MonoBehaviour
         transform.Rotate(new Vector3(0, mouseX, 0));
 
         _pitch -= mouseY;
-        _pitch = Mathf.Clamp(_pitch , -90, 90);
+        _pitch = Mathf.Clamp(_pitch , -60, 60);
         _camera.transform.localRotation = Quaternion.Euler(_pitch, 0, 0);
     }
 }

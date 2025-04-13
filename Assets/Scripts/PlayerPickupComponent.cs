@@ -19,15 +19,15 @@ public class PlayerPickupComponent : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EscapeManager.Instance.IsPaused)
         {
-            Vector3 startPos = _player.transform.position;
+            Vector3 startPos = Camera.main.transform.position;
             Vector3 cameraForward = _player.CameraForward;
             RaycastHit hit;
             if (Physics.Raycast(startPos, cameraForward, out hit, _raycastDist))
             {
                 PickableObject pickableObject = hit.transform.GetComponent<PickableObject>();
-                if (pickableObject)
+                if (!_currentObjectInHand && pickableObject)
                 {
                     _currentObjectInHand = pickableObject;
                     pickableObject.PickUpObject();

@@ -6,6 +6,7 @@ public class PlaceObjectZone : MonoBehaviour
 {
     [SerializeField]
     private EPickupType _pickupType;
+    public EPickupType PickupType { get { return _pickupType; } }
 
     [SerializeField]
     private PickableObject _currentObjectInZone;
@@ -13,12 +14,19 @@ public class PlaceObjectZone : MonoBehaviour
     [SerializeField]
     private Collider _selectionCollider;
 
+    [SerializeField]
+    private MeshRenderer _highlightRenderer;
+
     private void Start()
     {
         if (_currentObjectInZone)
         {
             ForceObjectInZone(_currentObjectInZone);
         }
+
+        Highlight(false);
+
+        ObjectPlacementZoneManager.Instance.RegisterObject(this);
     }
 
     public bool CanUseZone(PickableObject pickableObject)
@@ -46,7 +54,7 @@ public class PlaceObjectZone : MonoBehaviour
         return false;
     }
 
-    private bool HasObject()
+    public bool HasObject()
     {
         return _currentObjectInZone;
     }
@@ -74,5 +82,15 @@ public class PlaceObjectZone : MonoBehaviour
     {
         _currentObjectInZone = null;
         _selectionCollider.enabled = true;
+    }
+
+    public void Highlight(bool shouldHighlight)
+    {
+        if (HasObject())
+        {
+            shouldHighlight = false;
+        }
+
+        _highlightRenderer.enabled = shouldHighlight;
     }
 }
