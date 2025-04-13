@@ -22,6 +22,8 @@ public class EndGameUI : MonoBehaviour
     public void ShowUI()
     {
         _canvas.enabled = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void PressRetry()

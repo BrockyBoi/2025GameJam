@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class EscapeManager : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class EscapeManager : MonoBehaviour
 
     private bool _isPaused;
     public bool IsPaused { get { return _isPaused; } }
+
+    [SerializeField]
+    private PlayableDirector _timeLineDirector;
     private void Awake()
     {
         Instance = this;
@@ -30,6 +35,7 @@ public class EscapeManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             PauseUI.Instance.ShowUI();
+            _timeLineDirector.Pause();
         }
         else
         {
@@ -37,6 +43,7 @@ public class EscapeManager : MonoBehaviour
             PauseUI.Instance.gameObject.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            _timeLineDirector.Resume();
         }
     }
 }

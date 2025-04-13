@@ -262,6 +262,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Retry
       objectReference: {fileID: 0}
+    - target: {fileID: 1579124561374241090, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18.725973
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579124561374241090, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12.483983
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579124561374241090, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12.483983
+      objectReference: {fileID: 0}
     - target: {fileID: 2802159485115913423, guid: 5222f70407e527945be908c5b90766dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -366,6 +378,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5749791258985164901, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6a0c9f3f753acf48b689ad2d9c34975, type: 3}
     - target: {fileID: 6140781259640386462, guid: 5222f70407e527945be908c5b90766dd, type: 3}
       propertyPath: m_Name
       value: RetryButton
@@ -384,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 1285756918}
     - target: {fileID: 7257147339007755882, guid: 5222f70407e527945be908c5b90766dd, type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9148064846894302086, guid: 5222f70407e527945be908c5b90766dd, type: 3}
       propertyPath: m_text
@@ -1799,6 +1815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4144370042239249a8f0d4645389ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeLineDirector: {fileID: 2133335812}
 --- !u!114 &278571028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,7 +3223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6733658411445809247, guid: c9c3b5f66d288ff47a1fc84c4359b9bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000016264919
+      value: 7.97
       objectReference: {fileID: 0}
     - target: {fileID: 6733658411445809247, guid: c9c3b5f66d288ff47a1fc84c4359b9bc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3214,7 +3231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6733658411445809247, guid: c9c3b5f66d288ff47a1fc84c4359b9bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.6
+      value: -10.29
       objectReference: {fileID: 0}
     - target: {fileID: 6733658411445809247, guid: c9c3b5f66d288ff47a1fc84c4359b9bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5327,6 +5344,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1579124561374241090, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18.829473
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579124561374241090, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12.552982
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579124561374241090, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12.552982
+      objectReference: {fileID: 0}
     - target: {fileID: 5441862095562942253, guid: 5222f70407e527945be908c5b90766dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5407,6 +5436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5749791258985164901, guid: 5222f70407e527945be908c5b90766dd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6a0c9f3f753acf48b689ad2d9c34975, type: 3}
     - target: {fileID: 6691024469927699353, guid: 5222f70407e527945be908c5b90766dd, type: 3}
       propertyPath: m_Name
       value: PauseScreen
