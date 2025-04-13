@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SalmonPillow
       objectReference: {fileID: 0}
+    - target: {fileID: 4204571509454079391, guid: c597872c7bdfc7d41bb803107a536233, type: 3}
+      propertyPath: _isObjectSuspicious
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6961273440062499721, guid: c597872c7bdfc7d41bb803107a536233, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.2

@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: 1
-  _isObjectSuspicious: 0
-  _suspicionLevel: 0
+  _isObjectSuspicious: 1
+  _suspicionLevel: 0.75
   _collider: {fileID: 8347649516035459752}
   _meshRenderer: {fileID: 4903117270270069015}
   _spriteRenderer: {fileID: 5899800773704350045}
