@@ -42,8 +42,8 @@ public class PickableObject : MonoBehaviour
 
     private void Start()
     {
-        _spriteRenderer.enabled = true;
-        _meshRenderer.enabled = false;
+        _spriteRenderer.enabled = IsWallType();
+        _meshRenderer.enabled = !IsWallType();
     }
 
     private void Update()
@@ -70,6 +70,7 @@ public class PickableObject : MonoBehaviour
     public void PickUpObject()
     {
         _isPickedUp = true;
+
         _meshRenderer.enabled = false;
         _spriteRenderer.enabled = true;
 
@@ -85,8 +86,8 @@ public class PickableObject : MonoBehaviour
     private void PutDownObject()
     {
         _isPickedUp = false;
-        _meshRenderer.enabled = false;
-        _spriteRenderer.enabled = true;
+        _meshRenderer.enabled = !IsWallType();
+        _spriteRenderer.enabled = IsWallType();
 
         _collider.enabled = true;
 
@@ -106,5 +107,10 @@ public class PickableObject : MonoBehaviour
         {
             ObjectPlacementZoneManager.Instance.HighlightAllViableObjects(EPickupType.LargeGround, shouldShow);
         }
+    }
+
+    private bool IsWallType()
+    {
+        return pickupType == EPickupType.SmallWall || pickupType == EPickupType.LargeWall;
     }
 }

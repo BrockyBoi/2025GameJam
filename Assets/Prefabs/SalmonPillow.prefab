@@ -8,10 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 511844826864553701, guid: c597872c7bdfc7d41bb803107a536233, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -880023551735424718, guid: bc0f524c44b55fe428cac5eeba8d9778, type: 3}
     - target: {fileID: 2707925217135283915, guid: c597872c7bdfc7d41bb803107a536233, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0cc43179aabffbc4ca2a85cd17f8bc6b, type: 3}
+    - target: {fileID: 3494627306680680065, guid: c597872c7bdfc7d41bb803107a536233, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 880774007180850119, guid: bc0f524c44b55fe428cac5eeba8d9778, type: 3}
     - target: {fileID: 3620343356567865535, guid: c597872c7bdfc7d41bb803107a536233, type: 3}
       propertyPath: m_Name
       value: SalmonPillow

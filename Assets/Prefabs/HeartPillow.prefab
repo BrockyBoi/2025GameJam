@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 483363501187293575, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 483363501187293575, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 483363501187293575, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -68,10 +68,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeartPillow
       objectReference: {fileID: 0}
+    - target: {fileID: 6219823760463492239, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 880774007180850119, guid: bc0f524c44b55fe428cac5eeba8d9778, type: 3}
     - target: {fileID: 6662946209107021713, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: pickupType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7004322194230805739, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 7644844118293171368, guid: 2a89999816d36224abfc1aa98ebfecaa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
