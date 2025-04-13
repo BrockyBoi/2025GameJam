@@ -40,6 +40,13 @@ public class PickableObject : MonoBehaviour
 
     private PlaceObjectZone _zone;
 
+    public Vector3 StartScale { get; private set; }
+
+    private void Awake()
+    {
+        StartScale = transform.localScale;
+    }
+
     private void Start()
     {
         _spriteRenderer.enabled = IsWallType();

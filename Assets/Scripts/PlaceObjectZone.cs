@@ -11,6 +11,8 @@ public class PlaceObjectZone : MonoBehaviour
     [SerializeField]
     private PickableObject _currentObjectInZone;
 
+    public PickableObject ObjectInZone { get { return _currentObjectInZone; } }
+
     [SerializeField]
     private Collider _selectionCollider;
 
@@ -71,6 +73,7 @@ public class PlaceObjectZone : MonoBehaviour
         _currentObjectInZone.SetZone(this);
 
         _selectionCollider.enabled = false;
+        _currentObjectInZone.transform.localScale = _currentObjectInZone.StartScale / transform.localScale.x;
     }
 
     public void PlaceObjectInZone(PickableObject heldObject)

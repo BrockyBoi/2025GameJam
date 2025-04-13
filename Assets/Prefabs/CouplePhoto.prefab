@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5753230937359538311}
   - component: {fileID: 5899800773704350045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpriteImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 4015897547917086175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.57, y: 0.0039996, z: 1.421e-12}
-  m_LocalScale: {x: 0.042998116, y: 0.042998116, z: 0.042998116}
+  m_LocalPosition: {x: -0.062, y: 0.0039996, z: -0.00000047684}
+  m_LocalScale: {x: 0.05306851, y: 0.05306851, z: 0.05306851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1508529297870707743}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4903117270270069015}
   - component: {fileID: 8347649516035459752}
   - component: {fileID: 5633323266323919369}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CouplePhoto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.35, y: -0.09, z: 3.48}
-  m_LocalScale: {x: 0.050325476, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5753230937359538311}

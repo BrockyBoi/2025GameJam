@@ -20,12 +20,14 @@ public class MainMenuUI : MonoBehaviour
 
     public void PressCredits()
     {
-
+        _creditsGameObjectParent.SetActive(true);
+        _mainMenuGameObject.SetActive(false);
     }
 
     public void PressBackFromCredits()
     {
-
+        _creditsGameObjectParent.SetActive(false);
+        _mainMenuGameObject.SetActive(true);
     }
 
     public void PressQuit()
