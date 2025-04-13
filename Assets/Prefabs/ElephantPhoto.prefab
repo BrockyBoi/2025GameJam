@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElephantPhoto
       objectReference: {fileID: 0}
+    - target: {fileID: 5633323266323919369, guid: 9bbd501794436aa4f9f25969e233ddf5, type: 3}
+      propertyPath: _isObjectSuspicious
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5753230937359538311, guid: 9bbd501794436aa4f9f25969e233ddf5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.057819568

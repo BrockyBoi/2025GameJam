@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: pickupType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6662946209107021713, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
+      propertyPath: _isObjectSuspicious
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6741196921608103199, guid: a62c9383a1ea9594d84540a67427d4dc, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.29538444

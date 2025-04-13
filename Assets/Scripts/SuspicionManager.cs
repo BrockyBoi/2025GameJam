@@ -28,6 +28,8 @@ public class SuspicionManager : MonoBehaviour
             _currentSuspicionLevel += suspiciousObject.SuspicionLevel;
             _objectsSeen.Add(suspiciousObject);
 
+            SuspicionUI.Instance.SetSuspicionLevel(_currentSuspicionLevel);
+
             if (_currentSuspicionLevel >= _maxSuspicionAllowed)
             {
                 LoseGame();
